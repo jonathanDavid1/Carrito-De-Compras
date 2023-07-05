@@ -307,3 +307,46 @@ grid-column: span 2; justify-self: flex-end;
 .product__title {
 grid-column: span 3;
 }
+
+
+/* Footer */
+.footer {
+    background-color: var(--card-color);
+}
+.footer__container,
+.footer__top {
+
+    display: grid;
+    row-gap: var(--sp-1-5);
+}
+
+.footer__title {
+    margin-bottom: var(--sp-0-75);
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-1-5);
+}
+
+.footer__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--sp-2-5);
+    height: var(--sp-2-5);
+    color: var(--bg-color);
+    background-color: var(--title-color);
+    border-radius: 50%;
+    font-size: var(--sp-1-5);
+    transition: background-color .3s ease-in-out;
+}
+
+.footer__link:hover {
+    background-color: var (--primary-color);
+}
+
+.footer__bottom {
+    text-align: center;
+}
