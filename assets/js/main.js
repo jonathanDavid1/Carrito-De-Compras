@@ -14,3 +14,5 @@ showCart()
 /* End UI Elements*/
 /*Products*/
 products(await getProducts())
+/*Carrito*/
+cart
