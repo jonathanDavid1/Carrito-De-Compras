@@ -1,8 +1,8 @@
-import loader from './components/loader'
-import showMenu from './components/showMenu'
-import showCart from './components/showCart'
-import products from './components/products'
-import getProducts from './helpers/getProducts'
+import loader from './components/loader.js'
+import showMenu from './components/showMenu.js'
+import showCart from './components/showCart.js'
+import products from './components/products.js'
+import getProducts from './helpers/getProducts.js'
 /* UI */
 /*Ocultar loader*/
 
@@ -15,4 +15,4 @@ showCart()
 /*Products*/
 products(await getProducts())
 /*Carrito*/
-cart
+

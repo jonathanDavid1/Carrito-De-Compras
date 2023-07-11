@@ -3,7 +3,7 @@ function showMenu () {
     const menu = document.querySelector('.nav__menu')
 
     nav.addEventListener('click', function (e) {
-        if (e.target.closest('.btn.menu')) {
+        if (e.target.closest('.btn--menu')) {
             menu.classList.toggle('show--menu')
         }
         if (e.target.closest('.btn--close')){

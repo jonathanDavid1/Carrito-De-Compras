@@ -172,7 +172,7 @@ button {
     width: 100%;
     background-color: var(--bg-color);
     z-index: var(--z-fixed);
-    box-shadow: 0 0 10px Ohsla(0, 0%, 0%, 10%);
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 10%);
 }
 
 .nav {
@@ -200,10 +200,10 @@ button {
         left: -100%;
         width: 100%;
         height: calc(max-content - var(--header-height));
-        padding: var(--sp-3) 0 var (--sp-2);
+        padding: var(--sp-3) 0 var(--sp-2);
         background-color: var(--bg-color);
         z-index: var(--z-fixed);
-        transition: left .5s ease-in-out;
+        transition: bottom .3s ease-in-out; */
     }
 }
 
@@ -271,7 +271,7 @@ button {
 
 /* Show Menu */
 .show--menu {
-    left: 0;
+   left: 0;
 }
 
 /* Products */
@@ -394,7 +394,7 @@ button {
 .cart {
     position: fixed;
     bottom: var(--header-height);
-    right: 0;
+    right: -100%; /*aca deberia ir cero*/
     max-width: 375px;
     width: 100%;
     height: calc(100vh - var(--header-height));
@@ -526,7 +526,7 @@ button {
 
     .header {
         top: 0;
-        bottom: unset1
+        bottom: unset
     }
 
     .nav__list {
@@ -554,9 +554,8 @@ button {
 
 
 @media (min-width: 1024px) {
-
     .section--title,
     .container {
         margin: 0 auto;
     }
-}
+} 
