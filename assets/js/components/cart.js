@@ -22,24 +22,33 @@ function cart (db, printProducts) {
             const product = db.find(p => p.id === item.id)
             htmlCart += `
             <article class="article">
-                <div class="article__image">
-                    <img src="${product.image}" alt="${product.name}">
-                </div>
-                   <div class="article__content">
-                      <h3 class="article___title">${product.name}</h3>
-                      <span class="article__price">$${product.price}</span>
-                    <div class="article__quantity">
-                    </div>
-                    <button type="button" class="article__btn
-                            remove-from-cart">
-                        <i class='bx bx-trash'></i>
+            <div class="article__image">
+                <img src="${product.image}"
+                    alt="${product.name}">
+            </div>
+            <div class="article__content">
+                <h3 class="article___title">${product.name}</h3>
+                <span class="article__price">$${product.price}</span>
+                <div class="article__quantity">
+                    <button type="button" class="article__quantity-btn article--minus" data-id ="${item.id}">
+                        <i class='bx bx-minus'></i>
+                    </button>
+                    <span class="article__quantity-text">${item.qty}</span>
+                    <button type="button" class="article__quantity-btn article--plus" data-id ="${item.id}">
+                        <i class="bx bx-plus"></i>
                     </button>
                 </div>
-            </article>
+                <button type="button" class="article__btn
+                            remove-from-cart" data-id = ${item.id}>
+                    <i class='bx bx-trash'></i>
+                </button>
+            </div>
+        </article>
             ` 
             }
             notifyDOM.classList.add('show--notify')
         }
+        cart.innerHTML = htmlCart
         notifyDOM.innerHTML = showItemsCount()
         countDOM.innerHTML = showItemsCount()
         totalDOM.innerHTML = showTotal()
@@ -110,8 +119,33 @@ function cart (db, printProducts) {
         window.alert('Gracias por su compra')
     }
 
+    printCart()
     //Eventos
-    
+    productsDOM.addEventListener('click', function (e) {
+        if (e.target.closest('add--to--cart')){
+            const id = +e.target.closest('add--to--cart').dataset.id
+            removeFromCart(id)
+        }
+    })
+    cartDOM.addEventListener('click', function (e) {
+        if (e.target.closest('article--minus')){
+            const id = +e.target.closest('article--minus').dataset.id
+            addToCart(id)
+        }
+        if (e.target.closest('.article--plus')){
+            const id = +e.target.closest('article--plus').dataset.id
+            addToCart(id)
+        }
+        if (e.target.closest('remove-from-cart')){
+            const id = +e.target.closest('add--to--cart').dataset.id
+            deleteFromCart(id)
+        }
+
+    })
+    checkoutDOM.addEventListener('click', function (e){
+        checkout()
+    })
+
 }
 
 export default cart
