@@ -3,7 +3,8 @@
 
     --primary-color: hsl(354, 78%, 60%);
     --body-color: hsl(206, 4%, 97%);
-    --text-color: hsl(0, 0%, 20%) --bg-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 20%); 
+    --bg-color: hsl(0, 0%, 100%);
     --card-color: hsl(0, 0%, 90%);
 
     --body-font: 'Open Sans', sans-serif;
@@ -167,7 +168,7 @@ button {
 .header {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0; 
     width: 100%;
     background-color: var(--bg-color);
     z-index: var(--z-fixed);
@@ -396,7 +397,7 @@ button {
     right: 0;
     max-width: 375px;
     width: 100%;
-    height: calc(100vh- var(--header-height));
+    height: calc(100vh - var(--header-height));
     background-color: var(--bg-color);
     z-index: var(--z-fixed);
     transition: right .5s ease-in-out;
