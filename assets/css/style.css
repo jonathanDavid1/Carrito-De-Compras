@@ -4,6 +4,7 @@
     --primary-color: hsl(354, 78%, 60%);
     --body-color: hsl(206, 4%, 97%);
     --text-color: hsl(0, 0%, 20%); 
+    --title-color: hsl(0, 0%,10%);
     --bg-color: hsl(0, 0%, 100%);
     --card-color: hsl(0, 0%, 90%);
 
@@ -203,7 +204,7 @@ button {
         padding: var(--sp-3) 0 var(--sp-2);
         background-color: var(--bg-color);
         z-index: var(--z-fixed);
-        transition: bottom .3s ease-in-out; */
+        transition: bottom .3s ease-in-out; 
     }
 }
 
@@ -355,7 +356,7 @@ button {
 .footer__container,
 .footer__top {
     display: grid;
-    row-gap: var(--sp-1-5);
+    row-gap: var(--sp-1-5); 
 }
 
 .footer__title {
@@ -394,7 +395,7 @@ button {
 .cart {
     position: fixed;
     bottom: var(--header-height);
-    right: -100%; /*aca deberia ir cero*/
+    right: 100%; /*aca deberia ir cero*/
     max-width: 375px;
     width: 100%;
     height: calc(100vh - var(--header-height));
