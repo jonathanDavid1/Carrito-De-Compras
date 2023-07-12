@@ -404,6 +404,9 @@ button {
 }
 
 /* Show Cart */
+.show--cart {
+    right: 0;
+}
 
 .cart__container {
     display: grid;

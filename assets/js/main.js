@@ -6,7 +6,7 @@ import getProducts from './helpers/getProducts.js'
 /* UI */
 /*Ocultar loader*/
 
-loader()
+// loader()
 /* Mostrar menu*/
 showMenu()
 /*Mostrar Carrito*/

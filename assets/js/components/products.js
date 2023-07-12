@@ -1,5 +1,5 @@
 function products (products) {
-    const db = [..products]
+    const db = products
 
     function printproducts () {
         const productsDOM = document.querySelector('.products__container')

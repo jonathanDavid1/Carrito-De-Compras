@@ -3,7 +3,7 @@ function showCart () {
     const cart = document.querySelector('.cart')
 
     btncart.addEventListener('click', function(){
-        cart.classList.toggle('show--Cart')
+        cart.classList.toggle('show--cart')
     })
     cart.addEventListener('click', function (e) {
         if (e.target.closest('.btn--close')){
@@ -11,4 +11,4 @@ function showCart () {
         }
     })
 }
-export default showMenu
+export default showCart
