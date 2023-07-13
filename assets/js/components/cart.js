@@ -37,12 +37,12 @@ function cart (db, printProducts) {
                 <span class="article__quantity-text">${item.qty}</span>
                 <button type="button" class="article__quantity-btn article--plus" data-id="${item.id}">
                     <i class="bx bx-plus"></i>    
-​
+
                 </button>
             </div>
              <button type= "button" class="article__btn remove-from-cart" data-id="${item.id}">
                 <i class='bx bx-trash' ></i>
-​
+
              </button>
         </div>
     </articule>
@@ -110,12 +110,12 @@ function cart (db, printProducts) {
             const productFinded = db.find (p => p.id === item.id)
             productFinded.quantity -= item.qty 
         }
-​
+
     cart = []
     printCart()
     printProducts()
     window.alert('Gracias por su compra')
-​
+
     }
     //Eventos
     productsDOM.addEventListener('click', function (e) {
