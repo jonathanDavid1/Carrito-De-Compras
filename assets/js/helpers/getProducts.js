@@ -1,15 +1,8 @@
-async function getProducts () {
-    // return window.fetch('https://ecommercebackend.fundamentos-29.repl.co/')
-    // .then((res) => res.json())
-    // .then((data) => data)
-    // .catch((err) => {console.log(err)})
-    try {
-        const res = await window.fetch('https://ecommercebackend.fundamentos-29.repl.co/')
-        const data = await res.json()
-        return data 
-    }catch (err) {
-        console.log(error)
-    }
+function getProducts () {
+    return window.fetch('https://services-academlo-shopping.onrender.com/')
+    .then((res) => res.json())
+    .then((data) => data)
+    .catch((err) =>
+    { console.log (err) } )
 }
-
 export default getProducts

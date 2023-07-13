@@ -177,10 +177,10 @@ button {
 }
 
 .nav {
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: var(--header-height);
 }
 
 .nav__logo {
@@ -197,8 +197,8 @@ button {
 @media (max-width: 768px) {
     .nav__menu {
         position: fixed;
-        bottom: var(--header-height);
-        left: -100%;
+        bottom: -100%;
+        left: 0;
         width: 100%;
         height: calc(max-content - var(--header-height));
         padding: var(--sp-3) 0 var(--sp-2);
@@ -224,7 +224,7 @@ button {
 .nav__link {
     display: flex;
     align-items: center;
-    padding: var(--sp-0-75) var (--sp-1);
+    padding: var(--sp-0-75) var(--sp-1);
     color: var(--text-color);
     transition: color .3s ease-in-out;
 }
@@ -272,7 +272,7 @@ button {
 
 /* Show Menu */
 .show--menu {
-   left: 0;
+   bottom: var(--header-height);
 }
 
 /* Products */
@@ -300,15 +300,17 @@ button {
 }
 
 .product:hover img {
-
     transform: translateY(-10px);
 }
 
 .product__content {
     position: relative;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     background-color: var(--bg-color);
     padding: var(--sp-1-5);
+    min-height: 109px;
 }
 
 .product__btn {
@@ -318,7 +320,7 @@ button {
     width: 45px;
     height: 45px;
     background-color: var(--bg-color);
-    box-shadow: 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -353,8 +355,8 @@ button {
     background-color: var(--card-color);
 }
 
-.footer__container,
-.footer__top {
+
+.footer__top, .footer__container {
     display: grid;
     row-gap: var(--sp-1-5); 
 }
@@ -395,7 +397,7 @@ button {
 .cart {
     position: fixed;
     bottom: var(--header-height);
-    right: 100%; /*aca deberia ir cero*/
+    right: -100%; /*aca deberia ir cero*/
     max-width: 375px;
     width: 100%;
     height: calc(100vh - var(--header-height));
@@ -523,6 +525,10 @@ button {
     color: var(--bg-color);
     padding: var(--sp-1);
 }
+.cart {
+    top: var(--header-height);
+}
+
 @media (min-width: 768px) {
     :root {
         --header-height: 75px;
@@ -538,7 +544,8 @@ button {
         align-items: center;
     }
 
-    .nav__menu .btn--close,
+    .nav__menu     /**/
+    .btn--close,
     .btn--menu {
         display: none;
     }
