@@ -1,12 +1,12 @@
 :root {
     --header-height: 60px;
 
-    --primary-color: hsl(354, 78%, 60%);
-    --body-color: hsl(206, 4%, 97%);
+    --primary-color: hsl(354, 98%, 74%);
+    --body-color: hsl(342, 100%, 84%); /*--body-color: hsl(206, 4%, 97%);*/
     --text-color: hsl(0, 0%, 20%); 
     --title-color: hsl(0, 0%,10%);
-    --bg-color: hsl(0, 0%, 100%);
-    --card-color: hsl(0, 0%, 90%);
+    --bg-color: hsl(333, 62%, 90%); /*--bg-color: hsl(0, 0%, 100%);*/
+    --card-color: hsl(333, 62%, 90%); /*--card-color: hsl(0, 0%, 90%);*/
 
     --body-font: 'Open Sans', sans-serif;
     --title-font: 'Poppins', sans-serif;
@@ -569,4 +569,55 @@ button {
     .container {
         margin: 0 auto;
     }
+} 
+/* Modo Oscuro  */
+
+.darkModeSwitch{
+    background: #a002a6;
+    display:flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.darkModeSwitch span{
+    width:30px;
+    height:15px;
+    line-height:30px;
+    display:block;
+    color:#fff;
+
+    background: none;
+}
+.darkModeSwitch::after{
+    display:block;
+    background: #86686bde;
+    width: 1.9rem;
+    height: 1.9rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 3rem;
+    transition: all .5s ease;
+
+    content: "";
+}
+.darkModeSwitch.active{
+  background: #e82c52;
+}
+.darkModeSwitch.active::after{
+  left:unset;
+  right:0;
+}
+.dark {
+    --primary-color: hsl(0, 0%, 100%);
+    --body-color: hsl(0, 0%, 4%); /*--body-color: hsl(206, 4%, 97%);*/
+    --text-color: hsl(0, 0%, 100%); 
+    --title-color: hsl(0, 0%, 84%);
+    --bg-color: hsl(0, 0%, 27%); /*--bg-color: hsl(0, 0%, 100%);*/
+    --card-color: hsl(334, 10%, 69%);
 } 
