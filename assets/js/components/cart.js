@@ -113,9 +113,13 @@ function cart (db, printProducts) {
 
     cart = []
     printCart()
-    printProducts()
-    window.alert('Gracias por su compra')
-
+    // printProducts()
+    // swal('Gracias por su compra', "You clicked the button!", "success");
+    swal({
+        title: 'Compra realizada con exito',
+        text: 'Felicidades por su compra',
+        icon: 'success'
+    })
     }
     //Eventos
     productsDOM.addEventListener('click', function (e) {
