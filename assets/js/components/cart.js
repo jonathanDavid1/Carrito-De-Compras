@@ -119,7 +119,7 @@ function cart (db, printProducts) {
         title: 'Compra realizada con exito',
         text: 'Felicidades por su compra',
         icon: 'success'
-    })
+    });
     }
     //Eventos
     productsDOM.addEventListener('click', function (e) {
